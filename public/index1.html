@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2b8fd927cb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Music App</title>
+</head>
+
+<body class="bg-zinc-900">
+
+    <!--header-->
+    <div class="content bg-[url('../public/img/concert.png')] h-56 w-full object-cover ">
+        <h1 class="text-4xl text-white font-bold text-center pt-10 pb-2">MUSIC PLAYER</h1>
+        <div class="w-4/5 m-auto pb-12">
+            <p class="text-white text-xs text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At nobis necessitatibus, quia eveniet, mollitia
+                culpa sapiente quo illo expedita debitis a fugit laborum obcaecati totam! Hic eos aliquid quia natus?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, ullam, earum, reiciendis repudiandae
+                odio unde sapiente deserunt commodi assumenda distinctio iusto? Omnis sit aliquam cupiditate in fugit
+                quia quod tenetur?
+            </p>
+        </div>
+        <div class="bg-slate-600 bg-opacity-25 rounded-xl  m-auto w-20 h-8 text-center ">
+            <button class="text-white text-sm align-middle">START</button>
+        </div>
+    </div>
+
+
+    <!--carousal-->
+    <section>
+        <h1 class="text-2xl text-white md:text-2xl font-bold text-center pr-5 pl-5 pt-2 pb-2 ">TOP ALBUMS</h1>
+        <!--carousel-->
+        <div class="flex w-4/5 m-auto">
+
+            <!--Prev-->
+            <div class="w-2/12 flex items-center">
+                <div class="w-full text-right">
+                    <button onClick="prev()" class="prev p-1 md:p-3  md:text-4xl text-white"><i
+                            class="fa-solid fa-angle-left"></i></button>
+                </div>
+            </div>
+            <!--slider-->
+            <div id="sliderContainer" class="w-3/5 h-3/5 md:h-full md:w-10/12 overflow-hidden m-5 md:m-10">
+                <ul id="slider" class="flex w-full duration-700">
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/1.jpg" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">On My Way
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">Alan Walker</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/2.png" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Blinding Lights
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">The Weekend</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/3.jpg" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Cartoon
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">Daniel Levi</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/4.jpg" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Varriko
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">Ortaln</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/5.png" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Hello
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">Adele</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/6.jpg" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Makasm
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">KRSNA</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/7.jpg" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Tamasha
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">Pritam</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/8.jpg" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Sanak
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">Sajid</h4>
+                            </h5>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="img_play p-5 rounded-md">
+                            <img src="img/9.jpg" class="h-52 w-full object-cover rounded-sm" alt="alan">
+                            <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-white text-center">Dilbar
+                                <br>
+                                <h4 class="subtitle text-sm text-center text-gray-400">Mika</h4>
+                            </h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--next-->
+            <div class="w-2/12 flex items-center">
+                <div class="w-full">
+                    <button onClick="next()" class="next p-1 md:text-4xl text-white"><i
+                            class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="md:flex md:justify-between w-4/5 m-auto">
+
+        <!--latest album-->
+        <div class="menu_side w-1/2">
+            <h1 class="text-lg text-white font-bold text-center py-3">LATEST ALBUM</h1>
+            <div class="menu_song">
+                <ul>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">01</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/1.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">On My Way</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Alan Walker</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">02</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/2.png " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Blinding light</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">The Weekend</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">03</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/3.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Cartoon</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Daniel Walker</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">04</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/4.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Varriko</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Ortlan Hariko </h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">05</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/5.png " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Hello |||Adele</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Adele</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">06</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/6.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Makasm |||</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">KRSNA|||</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--latest singles-->
+
+        <div class="menu_side w-1/2 mb-5">
+            <h1 class="text-lg text-white font-bold text-center py-3">LATEST SINGLES</h1>
+            <div class="menu_song">
+                <ul>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">01</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/1.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">On My Way</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Allan Walker</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">02</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/7.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Tamasha</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Pritam ---</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">03</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/8.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Sanak</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Sajid Khan</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">04</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/9.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Dilbar</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Mika Singh</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">05</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/1.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">On My Way</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Allan Walker</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                    <li class="songItem">
+                        <div class="flex justify-evenly">
+                            <div class="flex justify-center items-center text-white">
+                                <span class="my-auto px-4">06</span>
+                                <i class="fa-solid fa-play px-4"></i>
+                                <div class="my-auto px-4"><img src="img/5.jpg " class="h-8 w-8 object-cover rounded-2xl"
+                                        alt="Alan"></div>
+                                <div>
+                                    <h5 class="text-lg px-2">Blinding Light</h5>
+                                    <h1 class="text-sm text-gray-400 px-4">Weekend</h1>
+                                </div>
+
+                            </div>
+                            <div class="text-white"><i class="fa-solid fa-ellipsis"></i></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="master_play flex justify-evenly py-10 bg-slate-700 rounded-2xl bg-opacity-20 w-3/4 mx-auto mb-5">
+        <div class="flex justify-evenly">
+            <img src="img/26th.jpg" class="h-8 w-8 object-cover rounded-2xl " alt="Alan" id="poster_master_play">
+            <h5 id="title" class="text-white text-lg px-10">Vande Mataram<br>
+                <div class="subtitle text-xs text-gray-400 text-left">Bankim Chandra</div>
+            </h5>
+        </div>
+        <div class="icon text-white ">
+            <i class="fa-solid fa-backward-step px-5"></i>
+            <i class="fa-solid fa-play px-5"></i>
+            <i class="fa-solid fa-forward-step px-5"></i>
+        </div>
+        <div class="bar">
+            <input type="range" id="seek" min="0" value="0" max="100">
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
